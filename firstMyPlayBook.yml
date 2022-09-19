@@ -1,8 +1,8 @@
 ---
--host: All
-become: yes
-tasks :
-  -name : myfirst yml file
-  apt: 
-    -name : tomacat7
-    status : present
+- host: all
+  become: yes
+  tasks:
+   - name: install tomcat
+     apt:
+      name: apach2
+      status: present
