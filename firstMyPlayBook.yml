@@ -1,6 +1,6 @@
 ---
  - name: Playbook to install NGINX
-   hosts: Ubuntuserver
+   hosts: all
    become: true
    tasks: 
     - name: Ansible apt install nginx
