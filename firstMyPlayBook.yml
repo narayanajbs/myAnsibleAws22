@@ -1,5 +1,5 @@
 ---
--host: all
+-host: All
 become: yes
 tasks :
   -name : myfirst yml file
