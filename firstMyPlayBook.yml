@@ -9,7 +9,7 @@
         state: present
       become: yes
       when: ansible_os_family == "Debian"
-    - name: Ansible apt install tree
+    - name: Ansible httpd install readhat
       yum:
         name: httpd
         state: present
