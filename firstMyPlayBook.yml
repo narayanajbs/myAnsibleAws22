@@ -10,7 +10,7 @@
       become: yes
       when: ansible_os_family == "Debian"
     - name: Ansible apt install tree
-      apt:
+      yum:
         name: tree
         state: present
       become: yes
