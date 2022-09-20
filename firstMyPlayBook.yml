@@ -1,6 +1,6 @@
 ---
  - name: Playbook to install NGINX
-   hosts: Ubuntuserver
+   hosts: all
    become: yes
    tasks: 
     - name: Ansible apt install apache2
