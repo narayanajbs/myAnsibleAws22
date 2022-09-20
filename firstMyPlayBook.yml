@@ -7,4 +7,5 @@
       apt:
         name: tree
         state: present
-      when: ansible_os_family = "Debian"
+      become: yes
+      when: ansible_os_family == "Debian"
