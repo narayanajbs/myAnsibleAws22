@@ -8,3 +8,10 @@ ansible -i myHosts -m setup -a "filter=ansible_distribution*" Redhatserver
 
 
 -------------https://www.howtoforge.com/ansible-guide-ad-hoc-command/
+
+
+Readhat
+service httpd status
+
+
+ansible_distribution: "Ubuntu"
