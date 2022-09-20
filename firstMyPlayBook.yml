@@ -15,3 +15,22 @@
         state: present
       become: yes
       when: ansible_os_family == "RedHat"
+    - name: ensure httpd is running
+      service:
+        name: httpd 
+        state: started
+      become: yes
+      when: ansible_os_family == "RedHat"
+    - name: Open port 80 for http access
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+      become: yes
+      when: ansible_os_family == "RedHat"
+    - name: Restart the firewalld service to load in the firewall changes
+      service: 
+        name: firewalld 
+        state: restarted
+      become: yes
+      when: ansible_os_family == "RedHat"
