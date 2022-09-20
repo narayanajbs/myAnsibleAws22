@@ -3,15 +3,15 @@
    hosts: Ubuntuserver
    become: yes
    tasks: 
-    - name: Ansible apt install tree
+    - name: Ansible apt install apache2
       apt:
-        name: tree
+        name: apache2
         state: present
       become: yes
       when: ansible_os_family == "Debian"
     - name: Ansible apt install tree
       yum:
-        name: tree
+        name: httpd
         state: present
       become: yes
       when: ansible_os_family == "RedHat"
