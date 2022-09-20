@@ -18,7 +18,7 @@
     - name: ensure httpd is running
       service:
         name: httpd 
-        state: started
+        state: restarted
       become: yes
       when: ansible_os_family == "RedHat"
     - name: Open port 80 for http access
