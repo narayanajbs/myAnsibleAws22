@@ -1,0 +1,6 @@
+
+
+ansible Ubuntuserver -i myHosts -m ping
+ansible Redhatserver -i myHosts -m ping
+ ansible -i myHosts -m setup Redhatserver
+ ansible -i myHosts -m setup Ubuntuserver
