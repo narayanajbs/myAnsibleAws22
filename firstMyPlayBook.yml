@@ -3,13 +3,13 @@
    hosts: all
    become: true
    tasks: 
-    - name: Ansible apt install nginx
+    - name: Ansible apt install tree
       apt:
-        name: nginx
+        name: tree
         state: present
         ansible_os_family: "Ubuntu"
-    - name: Ansible apt install nginx
+    - name: Ansible apt install tree in readhat
       yum:
-        name: nginx
+        name: tree
         state: present
         ansible_os_family: "RedHat"
