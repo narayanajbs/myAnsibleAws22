@@ -9,3 +9,9 @@
         state: present
       become: yes
       when: ansible_os_family == "Debian"
+    - name: Ansible apt install tree
+      apt:
+        name: tree
+        state: present
+      become: yes
+      when: ansible_os_family == "RedHat"
