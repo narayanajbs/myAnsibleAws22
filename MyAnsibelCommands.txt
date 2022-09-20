@@ -12,6 +12,10 @@ ansible -i myHosts -m setup -a "filter=ansible_distribution*" Redhatserver
 
 Readhat
 service httpd status
+// syntx check
+apachectl configtest
 
+find duplicte running port
+grep  '443' /etc/httpd/conf.d/*
 
 ansible_distribution: "Ubuntu"
