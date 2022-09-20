@@ -1,6 +1,10 @@
-
-
 ansible Ubuntuserver -i myHosts -m ping
 ansible Redhatserver -i myHosts -m ping
- ansible -i myHosts -m setup Redhatserver
- ansible -i myHosts -m setup Ubuntuserver
+ansible -i myHosts -m setup Redhatserver
+ansible -i myHosts -m setup Ubuntuserver
+ansible -i myHosts -m setup -a "filter=ansible_distribution*" Ubuntuserver
+ansible -i myHosts -m setup -a "filter=ansible_distribution*" Redhatserver
+
+
+
+-------------https://www.howtoforge.com/ansible-guide-ad-hoc-command/

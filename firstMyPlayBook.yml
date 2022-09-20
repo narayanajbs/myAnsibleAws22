@@ -7,3 +7,9 @@
       apt:
         name: nginx
         state: present
+        ansible_distribution: "Ubuntu"
+    - name: Ansible apt install nginx
+      yum:
+        name: nginx
+        state: present
+        ansible_distribution: "RedHat"
