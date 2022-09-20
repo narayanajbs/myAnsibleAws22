@@ -18,4 +18,11 @@ apachectl configtest
 find duplicte running port
 grep  '443' /etc/httpd/conf.d/*
 
+// to complete logs of the error
+journalctl -xe
+
+// add port
+sudo firewall-cmd --permanent --add-port=80/tcp
+
+
 ansible_distribution: "Ubuntu"

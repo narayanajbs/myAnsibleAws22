@@ -15,6 +15,12 @@
         state: present
       become: yes
       when: ansible_os_family == "RedHat"
+    - name: Install python2
+      yum:
+        name: python2
+        state: present
+      become: yes
+      when: ansible_os_family == "RedHat"
     - name: ensure httpd is running
       service:
         name: httpd 
